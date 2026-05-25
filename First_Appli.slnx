@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="First_Appli.Common/First_Appli.Common.csproj" Id="6e27dc86-d7ca-4414-9d1e-4bd39c3973a5" />
+  <Project Path="First_Appli.Data/First_Appli.Data.csproj" Id="1cf0ae0f-39fe-4f08-85bc-9100ce433109" />
+  <Project Path="First_Appli.Service/First_Appli.Service.csproj" Id="02e16edf-0001-4105-961f-d296c6b0f08e" />
+  <Project Path="First_Appli.Store/First_Appli.Store.csproj" Id="e0b3a0e0-b57c-4822-8371-88f5eb81ffac" />
+  <Project Path="First_Appli/First_Appli.csproj" />
+</Solution>
