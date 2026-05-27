@@ -7,12 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8"/>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7"/>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\First_Appli.Common\First_Appli.Common.csproj" />
+    <ProjectReference Include="..\First_Appli.Data\First_Appli.Data.csproj" />
+    <ProjectReference Include="..\First_Appli.Service\First_Appli.Service.csproj" />
+    <ProjectReference Include="..\First_Appli.Store\First_Appli.Store.csproj" />
   </ItemGroup>
 
 </Project>
