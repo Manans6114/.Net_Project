@@ -11,13 +11,14 @@ namespace First_Appli.Common.Model
         public int Id { get; set; }
 
         public string? RoleId { get; set; }
+        public string? Name { get; set; }
 
-        [Required(ErrorMessage = "Name is required")]
-        [StringLength(100)]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Department is required")]
-        [StringLength(100)]
         public string Department { get; set; }
+
+        public string Email { get; set; }
+
+        public string PasswordHash { get; set; }
+
+        public string Role { get; set; }
     }
 }

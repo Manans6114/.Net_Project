@@ -1,10 +1,11 @@
 ﻿using First_Appli.Common.Model;
 using First_Appli.Service.Abstractions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace First_Appli.Controllers
 {
-
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase
@@ -16,6 +17,7 @@ namespace First_Appli.Controllers
             _employeeService = employeeService;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllEmployees()
         {
@@ -31,6 +33,8 @@ namespace First_Appli.Controllers
             }
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployeeById(int id)
         {
@@ -45,6 +49,8 @@ namespace First_Appli.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
 
         [HttpPost]
         public async Task<IActionResult> InsertEmployee(Employee employee)
@@ -66,6 +72,8 @@ namespace First_Appli.Controllers
             }
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdateEmployee(Employee employee)
         {
@@ -86,6 +94,8 @@ namespace First_Appli.Controllers
             }
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
